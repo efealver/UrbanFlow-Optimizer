@@ -1,0 +1,1202 @@
+[
+  {
+    "n_intersections": 16,
+    "n_vehicles": 50,
+    "seed": 42,
+    "serial_time": 0.0005377079999999979,
+    "serial_phase_times": {
+      "signal": 1.3249999999999373e-05,
+      "congestion": 1.2749999999998873e-05,
+      "routing": 0.0005004169999999961
+    },
+    "serial_bottlenecks": 12,
+    "serial_routed": 50,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0008152499999999965,
+        "phase_times": {
+          "signal": 8.69999999999968e-05,
+          "congestion": 6.062500000000165e-05,
+          "routing": 0.000653041
+        },
+        "speedup": 0.6595620975160995,
+        "efficiency": 0.6595620975160995,
+        "bottlenecks": 12,
+        "routed": 50
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0009357080000000004,
+        "phase_times": {
+          "signal": 0.00010912499999999464,
+          "congestion": 0.0001154169999999996,
+          "routing": 0.0006967500000000029
+        },
+        "speedup": 0.5746536312610319,
+        "efficiency": 0.28732681563051593,
+        "bottlenecks": 12,
+        "routed": 50
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0011311250000000037,
+        "phase_times": {
+          "signal": 0.0001703750000000004,
+          "congestion": 0.00018383299999999436,
+          "routing": 0.0007602079999999983
+        },
+        "speedup": 0.47537451652115914,
+        "efficiency": 0.11884362913028979,
+        "bottlenecks": 12,
+        "routed": 50
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0016322920000000005,
+        "phase_times": {
+          "signal": 0.00030641700000000327,
+          "congestion": 0.0003158330000000015,
+          "routing": 0.0009724170000000032
+        },
+        "speedup": 0.3294190010120724,
+        "efficiency": 0.04117737512650905,
+        "bottlenecks": 12,
+        "routed": 50
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.0026050840000000006,
+        "phase_times": {
+          "signal": 0.0006035419999999986,
+          "congestion": 0.0006119159999999971,
+          "routing": 0.001338209
+        },
+        "speedup": 0.20640716383809418,
+        "efficiency": 0.012900447739880886,
+        "bottlenecks": 12,
+        "routed": 50
+      }
+    ]
+  },
+  {
+    "n_intersections": 16,
+    "n_vehicles": 100,
+    "seed": 42,
+    "serial_time": 0.0010048749999999954,
+    "serial_phase_times": {
+      "signal": 1.1917000000000177e-05,
+      "congestion": 1.1833000000002758e-05,
+      "routing": 0.0009660410000000008
+    },
+    "serial_bottlenecks": 12,
+    "serial_routed": 100,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0013477500000000017,
+        "phase_times": {
+          "signal": 6.329100000000004e-05,
+          "congestion": 5.175000000000318e-05,
+          "routing": 0.0012194999999999984
+        },
+        "speedup": 0.7455945093674599,
+        "efficiency": 0.7455945093674599,
+        "bottlenecks": 12,
+        "routed": 100
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0014839999999999992,
+        "phase_times": {
+          "signal": 9.883299999999956e-05,
+          "congestion": 9.404200000000251e-05,
+          "routing": 0.0012763330000000045
+        },
+        "speedup": 0.6771394878706172,
+        "efficiency": 0.3385697439353086,
+        "bottlenecks": 12,
+        "routed": 100
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.001796625000000003,
+        "phase_times": {
+          "signal": 0.00017495800000000283,
+          "congestion": 0.0002092500000000011,
+          "routing": 0.0013945409999999991
+        },
+        "speedup": 0.5593126000139115,
+        "efficiency": 0.13982815000347787,
+        "bottlenecks": 12,
+        "routed": 100
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0024575000000000014,
+        "phase_times": {
+          "signal": 0.0003614160000000033,
+          "congestion": 0.0004166670000000025,
+          "routing": 0.0016523330000000058
+        },
+        "speedup": 0.40890132248219524,
+        "efficiency": 0.051112665310274405,
+        "bottlenecks": 12,
+        "routed": 100
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.0037168330000000027,
+        "phase_times": {
+          "signal": 0.0007017080000000023,
+          "congestion": 0.0007824160000000011,
+          "routing": 0.002184959
+        },
+        "speedup": 0.27035785573362986,
+        "efficiency": 0.016897365983351866,
+        "bottlenecks": 12,
+        "routed": 100
+      }
+    ]
+  },
+  {
+    "n_intersections": 16,
+    "n_vehicles": 200,
+    "seed": 42,
+    "serial_time": 0.001895916999999997,
+    "serial_phase_times": {
+      "signal": 1.1707999999999164e-05,
+      "congestion": 1.1999999999998123e-05,
+      "routing": 0.0018456660000000097
+    },
+    "serial_bottlenecks": 12,
+    "serial_routed": 200,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.002615000000000006,
+        "phase_times": {
+          "signal": 6.304199999999927e-05,
+          "congestion": 7.266599999999901e-05,
+          "routing": 0.0024645830000000063
+        },
+        "speedup": 0.7250160611854656,
+        "efficiency": 0.7250160611854656,
+        "bottlenecks": 12,
+        "routed": 200
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0026221670000000086,
+        "phase_times": {
+          "signal": 0.00010929200000001082,
+          "congestion": 0.00011958299999999256,
+          "routing": 0.002379041999999998
+        },
+        "speedup": 0.7230344215299753,
+        "efficiency": 0.36151721076498766,
+        "bottlenecks": 12,
+        "routed": 200
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0028733749999999975,
+        "phase_times": {
+          "signal": 0.00018291700000000466,
+          "congestion": 0.00023241699999999865,
+          "routing": 0.0024397500000000044
+        },
+        "speedup": 0.6598223343629003,
+        "efficiency": 0.16495558359072507,
+        "bottlenecks": 12,
+        "routed": 200
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0035162499999999985,
+        "phase_times": {
+          "signal": 0.00034566699999999395,
+          "congestion": 0.00038249999999999396,
+          "routing": 0.0027606670000000083
+        },
+        "speedup": 0.5391872022751505,
+        "efficiency": 0.06739840028439381,
+        "bottlenecks": 12,
+        "routed": 200
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.004837416999999997,
+        "phase_times": {
+          "signal": 0.0007036249999999994,
+          "congestion": 0.0007961250000000086,
+          "routing": 0.0032918749999999997
+        },
+        "speedup": 0.3919275514184529,
+        "efficiency": 0.024495471963653308,
+        "bottlenecks": 12,
+        "routed": 200
+      }
+    ]
+  },
+  {
+    "n_intersections": 25,
+    "n_vehicles": 50,
+    "seed": 42,
+    "serial_time": 0.0007274579999999864,
+    "serial_phase_times": {
+      "signal": 1.695899999999695e-05,
+      "congestion": 1.8999999999991246e-05,
+      "routing": 0.000682292000000001
+    },
+    "serial_bottlenecks": 17,
+    "serial_routed": 50,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0010526250000000015,
+        "phase_times": {
+          "signal": 6.795900000000632e-05,
+          "congestion": 8.524999999999505e-05,
+          "routing": 0.0008882919999999989
+        },
+        "speedup": 0.6910894193088568,
+        "efficiency": 0.6910894193088568,
+        "bottlenecks": 17,
+        "routed": 50
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0012033330000000009,
+        "phase_times": {
+          "signal": 0.00011904199999999976,
+          "congestion": 0.00013133399999999684,
+          "routing": 0.0009390410000000016
+        },
+        "speedup": 0.604535901533479,
+        "efficiency": 0.3022679507667395,
+        "bottlenecks": 17,
+        "routed": 50
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0014799999999999952,
+        "phase_times": {
+          "signal": 0.0001751249999999982,
+          "congestion": 0.00022454200000000812,
+          "routing": 0.001062207999999995
+        },
+        "speedup": 0.4915256756756681,
+        "efficiency": 0.12288141891891702,
+        "bottlenecks": 17,
+        "routed": 50
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.002187833,
+        "phase_times": {
+          "signal": 0.00041658299999999815,
+          "congestion": 0.00041783399999999193,
+          "routing": 0.0013258329999999985
+        },
+        "speedup": 0.33250161232598024,
+        "efficiency": 0.04156270154074753,
+        "bottlenecks": 17,
+        "routed": 50
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.0035262920000000003,
+        "phase_times": {
+          "signal": 0.0007107080000000043,
+          "congestion": 0.000824416999999994,
+          "routing": 0.0019465000000000038
+        },
+        "speedup": 0.20629545142602665,
+        "efficiency": 0.012893465714126666,
+        "bottlenecks": 17,
+        "routed": 50
+      }
+    ]
+  },
+  {
+    "n_intersections": 25,
+    "n_vehicles": 100,
+    "seed": 42,
+    "serial_time": 0.0014375410000000005,
+    "serial_phase_times": {
+      "signal": 1.733300000000826e-05,
+      "congestion": 1.8125000000007718e-05,
+      "routing": 0.0013876249999999896
+    },
+    "serial_bottlenecks": 17,
+    "serial_routed": 100,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.002032292000000005,
+        "phase_times": {
+          "signal": 7.050000000000112e-05,
+          "congestion": 8.287499999999615e-05,
+          "routing": 0.0018654589999999999
+        },
+        "speedup": 0.707349632828352,
+        "efficiency": 0.707349632828352,
+        "bottlenecks": 17,
+        "routed": 100
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0020246670000000078,
+        "phase_times": {
+          "signal": 0.00011729200000000495,
+          "congestion": 0.00013637499999999414,
+          "routing": 0.0017565839999999916
+        },
+        "speedup": 0.7100135479068879,
+        "efficiency": 0.35500677395344393,
+        "bottlenecks": 17,
+        "routed": 100
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0023158330000000033,
+        "phase_times": {
+          "signal": 0.00018933299999999986,
+          "congestion": 0.000237374999999998,
+          "routing": 0.0018709999999999977
+        },
+        "speedup": 0.6207446737307908,
+        "efficiency": 0.1551861684326977,
+        "bottlenecks": 17,
+        "routed": 100
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0029687080000000005,
+        "phase_times": {
+          "signal": 0.00040666699999999945,
+          "congestion": 0.0004076249999999948,
+          "routing": 0.002127082999999988
+        },
+        "speedup": 0.48423118743911503,
+        "efficiency": 0.06052889842988938,
+        "bottlenecks": 17,
+        "routed": 100
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.004305792000000003,
+        "phase_times": {
+          "signal": 0.0007822910000000044,
+          "congestion": 0.0007885419999999893,
+          "routing": 0.002648582999999996
+        },
+        "speedup": 0.33386215590534785,
+        "efficiency": 0.02086638474408424,
+        "bottlenecks": 17,
+        "routed": 100
+      }
+    ]
+  },
+  {
+    "n_intersections": 25,
+    "n_vehicles": 200,
+    "seed": 42,
+    "serial_time": 0.0029789580000000038,
+    "serial_phase_times": {
+      "signal": 1.7792000000002584e-05,
+      "congestion": 1.7750000000010813e-05,
+      "routing": 0.0029067919999999914
+    },
+    "serial_bottlenecks": 17,
+    "serial_routed": 200,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0034119580000000066,
+        "phase_times": {
+          "signal": 8.233300000000388e-05,
+          "congestion": 8.72079999999914e-05,
+          "routing": 0.003227707999999996
+        },
+        "speedup": 0.8730933968120352,
+        "efficiency": 0.8730933968120352,
+        "bottlenecks": 17,
+        "routed": 200
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.00362875,
+        "phase_times": {
+          "signal": 0.0001148750000000004,
+          "congestion": 0.00012516699999999548,
+          "routing": 0.003373749999999995
+        },
+        "speedup": 0.8209322769548753,
+        "efficiency": 0.4104661384774376,
+        "bottlenecks": 17,
+        "routed": 200
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.003950417000000012,
+        "phase_times": {
+          "signal": 0.00018208299999999955,
+          "congestion": 0.00022345799999999583,
+          "routing": 0.0035249580000000086
+        },
+        "speedup": 0.7540869736030387,
+        "efficiency": 0.18852174340075967,
+        "bottlenecks": 17,
+        "routed": 200
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.004504625000000012,
+        "phase_times": {
+          "signal": 0.00034508299999999603,
+          "congestion": 0.00040520799999999024,
+          "routing": 0.0037265000000000215
+        },
+        "speedup": 0.6613109859311254,
+        "efficiency": 0.08266387324139067,
+        "bottlenecks": 17,
+        "routed": 200
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.005794624999999998,
+        "phase_times": {
+          "signal": 0.0007014170000000097,
+          "congestion": 0.0007861250000000264,
+          "routing": 0.004260541999999978
+        },
+        "speedup": 0.5140898677653869,
+        "efficiency": 0.03213061673533668,
+        "bottlenecks": 17,
+        "routed": 200
+      }
+    ]
+  },
+  {
+    "n_intersections": 36,
+    "n_vehicles": 50,
+    "seed": 42,
+    "serial_time": 0.0009338750000000007,
+    "serial_phase_times": {
+      "signal": 2.4415999999999327e-05,
+      "congestion": 2.6958999999993072e-05,
+      "routing": 0.0008713750000000076
+    },
+    "serial_bottlenecks": 26,
+    "serial_routed": 50,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0012348339999999902,
+        "phase_times": {
+          "signal": 8.38339999999771e-05,
+          "congestion": 9.612500000000246e-05,
+          "routing": 0.0010435420000000084
+        },
+        "speedup": 0.7562757423265055,
+        "efficiency": 0.7562757423265055,
+        "bottlenecks": 26,
+        "routed": 50
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.00136675,
+        "phase_times": {
+          "signal": 0.00011962500000001208,
+          "congestion": 0.00014575000000000005,
+          "routing": 0.001087084000000016
+        },
+        "speedup": 0.6832815072251698,
+        "efficiency": 0.3416407536125849,
+        "bottlenecks": 26,
+        "routed": 50
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0017031670000000054,
+        "phase_times": {
+          "signal": 0.00018345799999999746,
+          "congestion": 0.0002258749999999865,
+          "routing": 0.0012752919999999834
+        },
+        "speedup": 0.548316753436391,
+        "efficiency": 0.13707918835909774,
+        "bottlenecks": 26,
+        "routed": 50
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0023515419999999843,
+        "phase_times": {
+          "signal": 0.0004006249999999878,
+          "congestion": 0.0004152909999999843,
+          "routing": 0.0015082090000000103
+        },
+        "speedup": 0.39713303015638546,
+        "efficiency": 0.04964162876954818,
+        "bottlenecks": 26,
+        "routed": 50
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.0036553750000000163,
+        "phase_times": {
+          "signal": 0.0007344579999999934,
+          "congestion": 0.0008190000000000142,
+          "routing": 0.0020572500000000105
+        },
+        "speedup": 0.25547994391820167,
+        "efficiency": 0.015967496494887604,
+        "bottlenecks": 26,
+        "routed": 50
+      }
+    ]
+  },
+  {
+    "n_intersections": 36,
+    "n_vehicles": 100,
+    "seed": 42,
+    "serial_time": 0.0019279999999999853,
+    "serial_phase_times": {
+      "signal": 2.462500000000034e-05,
+      "congestion": 2.6582999999996693e-05,
+      "routing": 0.0018616660000000118
+    },
+    "serial_bottlenecks": 26,
+    "serial_routed": 100,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.002364540999999998,
+        "phase_times": {
+          "signal": 9.487499999999427e-05,
+          "congestion": 9.699999999998599e-05,
+          "routing": 0.002160207999999997
+        },
+        "speedup": 0.8153802365871377,
+        "efficiency": 0.8153802365871377,
+        "bottlenecks": 26,
+        "routed": 100
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.002556625000000007,
+        "phase_times": {
+          "signal": 0.0001157499999999978,
+          "congestion": 0.0001517080000000004,
+          "routing": 0.0022746250000000023
+        },
+        "speedup": 0.7541192001173345,
+        "efficiency": 0.37705960005866723,
+        "bottlenecks": 26,
+        "routed": 100
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.002811707999999996,
+        "phase_times": {
+          "signal": 0.00018625000000002667,
+          "congestion": 0.00022041600000000106,
+          "routing": 0.0023828750000000065
+        },
+        "speedup": 0.6857042054153518,
+        "efficiency": 0.17142605135383795,
+        "bottlenecks": 26,
+        "routed": 100
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0035494999999999832,
+        "phase_times": {
+          "signal": 0.0004975000000000118,
+          "congestion": 0.0004141670000000208,
+          "routing": 0.0026097079999999884
+        },
+        "speedup": 0.543175095083813,
+        "efficiency": 0.06789688688547663,
+        "bottlenecks": 26,
+        "routed": 100
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.004752208000000008,
+        "phase_times": {
+          "signal": 0.0006971249999999929,
+          "congestion": 0.000830708999999985,
+          "routing": 0.0031776249999999895
+        },
+        "speedup": 0.40570614754235973,
+        "efficiency": 0.025356634221397483,
+        "bottlenecks": 26,
+        "routed": 100
+      }
+    ]
+  },
+  {
+    "n_intersections": 36,
+    "n_vehicles": 200,
+    "seed": 42,
+    "serial_time": 0.0040133750000000135,
+    "serial_phase_times": {
+      "signal": 2.220899999999526e-05,
+      "congestion": 2.7166999999994612e-05,
+      "routing": 0.003930875
+    },
+    "serial_bottlenecks": 26,
+    "serial_routed": 200,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.004668124999999995,
+        "phase_times": {
+          "signal": 7.916700000001886e-05,
+          "congestion": 9.954199999998026e-05,
+          "routing": 0.004475042000000012
+        },
+        "speedup": 0.8597402597402635,
+        "efficiency": 0.8597402597402635,
+        "bottlenecks": 26,
+        "routed": 200
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.004850542000000013,
+        "phase_times": {
+          "signal": 0.00012529199999999907,
+          "congestion": 0.00015366599999999675,
+          "routing": 0.004555417000000006
+        },
+        "speedup": 0.8274075350754622,
+        "efficiency": 0.4137037675377311,
+        "bottlenecks": 26,
+        "routed": 200
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.00511724999999999,
+        "phase_times": {
+          "signal": 0.00019904199999998262,
+          "congestion": 0.0002391250000000067,
+          "routing": 0.004659084000000008
+        },
+        "speedup": 0.7842835507352623,
+        "efficiency": 0.1960708876838156,
+        "bottlenecks": 26,
+        "routed": 200
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.005870959000000009,
+        "phase_times": {
+          "signal": 0.00040079199999998316,
+          "congestion": 0.00042604200000001535,
+          "routing": 0.005010125000000004
+        },
+        "speedup": 0.6835978585440653,
+        "efficiency": 0.08544973231800816,
+        "bottlenecks": 26,
+        "routed": 200
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.007210582999999993,
+        "phase_times": {
+          "signal": 0.0007227090000000158,
+          "congestion": 0.0008415840000000063,
+          "routing": 0.005597999999999992
+        },
+        "speedup": 0.5565950769861491,
+        "efficiency": 0.03478719231163432,
+        "bottlenecks": 26,
+        "routed": 200
+      }
+    ]
+  },
+  {
+    "n_intersections": 49,
+    "n_vehicles": 50,
+    "seed": 42,
+    "serial_time": 0.001433624999999994,
+    "serial_phase_times": {
+      "signal": 3.1292000000016085e-05,
+      "congestion": 3.716700000000461e-05,
+      "routing": 0.001356999999999997
+    },
+    "serial_bottlenecks": 33,
+    "serial_routed": 50,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0017582079999999833,
+        "phase_times": {
+          "signal": 9.375000000000355e-05,
+          "congestion": 0.00010283299999999662,
+          "routing": 0.001548958000000017
+        },
+        "speedup": 0.8153898742355896,
+        "efficiency": 0.8153898742355896,
+        "bottlenecks": 33,
+        "routed": 50
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0022035409999999755,
+        "phase_times": {
+          "signal": 0.00013016700000001435,
+          "congestion": 0.00018558299999998917,
+          "routing": 0.0018720419999999904
+        },
+        "speedup": 0.6506005561049283,
+        "efficiency": 0.32530027805246414,
+        "bottlenecks": 33,
+        "routed": 50
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0022737079999999854,
+        "phase_times": {
+          "signal": 0.00021183399999999408,
+          "congestion": 0.0002521659999999981,
+          "routing": 0.001789999999999986
+        },
+        "speedup": 0.6305229167509651,
+        "efficiency": 0.15763072918774126,
+        "bottlenecks": 33,
+        "routed": 50
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.002867915999999998,
+        "phase_times": {
+          "signal": 0.00039262500000000755,
+          "congestion": 0.00044362500000000304,
+          "routing": 0.0020047089999999934
+        },
+        "speedup": 0.49988388781261195,
+        "efficiency": 0.062485485976576494,
+        "bottlenecks": 33,
+        "routed": 50
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.004157166000000018,
+        "phase_times": {
+          "signal": 0.000719750000000019,
+          "congestion": 0.0007614579999999926,
+          "routing": 0.002617124999999998
+        },
+        "speedup": 0.3448563276039465,
+        "efficiency": 0.021553520475246658,
+        "bottlenecks": 33,
+        "routed": 50
+      }
+    ]
+  },
+  {
+    "n_intersections": 49,
+    "n_vehicles": 100,
+    "seed": 42,
+    "serial_time": 0.003118583000000008,
+    "serial_phase_times": {
+      "signal": 3.237500000000115e-05,
+      "congestion": 3.916700000000661e-05,
+      "routing": 0.003011708000000002
+    },
+    "serial_bottlenecks": 33,
+    "serial_routed": 100,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0034665000000000112,
+        "phase_times": {
+          "signal": 9.820900000001576e-05,
+          "congestion": 0.00013816700000002236,
+          "routing": 0.00321550000000001
+        },
+        "speedup": 0.899634501658733,
+        "efficiency": 0.899634501658733,
+        "bottlenecks": 33,
+        "routed": 100
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.0033929580000000015,
+        "phase_times": {
+          "signal": 0.00013849999999998586,
+          "congestion": 0.00017858300000000993,
+          "routing": 0.003060541
+        },
+        "speedup": 0.9191339827961345,
+        "efficiency": 0.4595669913980672,
+        "bottlenecks": 33,
+        "routed": 100
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.003625125000000007,
+        "phase_times": {
+          "signal": 0.00021508399999997652,
+          "congestion": 0.00024320800000002252,
+          "routing": 0.0031471250000000006
+        },
+        "speedup": 0.8602690941691672,
+        "efficiency": 0.2150672735422918,
+        "bottlenecks": 33,
+        "routed": 100
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0043474579999999985,
+        "phase_times": {
+          "signal": 0.00039891699999999863,
+          "congestion": 0.00042916599999998084,
+          "routing": 0.003491083000000006
+        },
+        "speedup": 0.7173348195658266,
+        "efficiency": 0.08966685244572832,
+        "bottlenecks": 33,
+        "routed": 100
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.006414957999999971,
+        "phase_times": {
+          "signal": 0.0013606249999999764,
+          "congestion": 0.0007964589999999994,
+          "routing": 0.004206458999999996
+        },
+        "speedup": 0.4861423878379285,
+        "efficiency": 0.030383899239870532,
+        "bottlenecks": 33,
+        "routed": 100
+      }
+    ]
+  },
+  {
+    "n_intersections": 49,
+    "n_vehicles": 200,
+    "seed": 42,
+    "serial_time": 0.005448958000000004,
+    "serial_phase_times": {
+      "signal": 3.0250000000009436e-05,
+      "congestion": 3.716700000000461e-05,
+      "routing": 0.0053558329999999765
+    },
+    "serial_bottlenecks": 33,
+    "serial_routed": 200,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.006858124999999993,
+        "phase_times": {
+          "signal": 8.787500000001502e-05,
+          "congestion": 0.00011508300000001581,
+          "routing": 0.006638749999999971
+        },
+        "speedup": 0.7945259090494865,
+        "efficiency": 0.7945259090494865,
+        "bottlenecks": 33,
+        "routed": 200
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.006665458000000013,
+        "phase_times": {
+          "signal": 0.00013491699999995665,
+          "congestion": 0.0001734580000000152,
+          "routing": 0.006338874999999966
+        },
+        "speedup": 0.8174919112835146,
+        "efficiency": 0.4087459556417573,
+        "bottlenecks": 33,
+        "routed": 200
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.007255542000000004,
+        "phase_times": {
+          "signal": 0.00024062499999999432,
+          "congestion": 0.0002495410000000198,
+          "routing": 0.006737415999999996
+        },
+        "speedup": 0.7510063341925387,
+        "efficiency": 0.18775158354813468,
+        "bottlenecks": 33,
+        "routed": 200
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.007789292000000003,
+        "phase_times": {
+          "signal": 0.0006005420000000372,
+          "congestion": 0.00044166700000003445,
+          "routing": 0.0067085420000000395
+        },
+        "speedup": 0.6995447082995478,
+        "efficiency": 0.08744308853744348,
+        "bottlenecks": 33,
+        "routed": 200
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.009076874999999984,
+        "phase_times": {
+          "signal": 0.0007416670000000014,
+          "congestion": 0.000801416999999971,
+          "routing": 0.007478125000000002
+        },
+        "speedup": 0.6003121118226277,
+        "efficiency": 0.03751950698891423,
+        "bottlenecks": 33,
+        "routed": 200
+      }
+    ]
+  },
+  {
+    "n_intersections": 64,
+    "n_vehicles": 50,
+    "seed": 42,
+    "serial_time": 0.0017620420000000192,
+    "serial_phase_times": {
+      "signal": 3.9083999999967034e-05,
+      "congestion": 5.016699999998986e-05,
+      "routing": 0.0016625000000000112
+    },
+    "serial_bottlenecks": 40,
+    "serial_routed": 50,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.0022335840000000107,
+        "phase_times": {
+          "signal": 9.962499999999208e-05,
+          "congestion": 0.0001335419999999865,
+          "routing": 0.001984083999999997
+        },
+        "speedup": 0.7888854862857232,
+        "efficiency": 0.7888854862857232,
+        "bottlenecks": 40,
+        "routed": 50
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.002383750000000018,
+        "phase_times": {
+          "signal": 0.00016404199999997537,
+          "congestion": 0.000199541999999997,
+          "routing": 0.0020022920000000166
+        },
+        "speedup": 0.7391890928159438,
+        "efficiency": 0.3695945464079719,
+        "bottlenecks": 40,
+        "routed": 50
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.0025897919999999797,
+        "phase_times": {
+          "signal": 0.00021766700000003247,
+          "congestion": 0.0002814580000000122,
+          "routing": 0.0020716250000000214
+        },
+        "speedup": 0.6803797370599775,
+        "efficiency": 0.17009493426499436,
+        "bottlenecks": 40,
+        "routed": 50
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.0033990420000000188,
+        "phase_times": {
+          "signal": 0.00038633299999996096,
+          "congestion": 0.00047629100000001756,
+          "routing": 0.0025021250000000217
+        },
+        "speedup": 0.5183937121106504,
+        "efficiency": 0.0647992140138313,
+        "bottlenecks": 40,
+        "routed": 50
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.0044684580000000085,
+        "phase_times": {
+          "signal": 0.0007815409999999967,
+          "congestion": 0.0007986669999999751,
+          "routing": 0.0028328750000000125
+        },
+        "speedup": 0.3943288713914321,
+        "efficiency": 0.024645554461964505,
+        "bottlenecks": 40,
+        "routed": 50
+      }
+    ]
+  },
+  {
+    "n_intersections": 64,
+    "n_vehicles": 100,
+    "seed": 42,
+    "serial_time": 0.0034809579999999785,
+    "serial_phase_times": {
+      "signal": 3.954200000000352e-05,
+      "congestion": 4.8749999999986304e-05,
+      "routing": 0.00337787500000003
+    },
+    "serial_bottlenecks": 40,
+    "serial_routed": 100,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.004209958000000014,
+        "phase_times": {
+          "signal": 9.762500000004559e-05,
+          "congestion": 0.0001304169999999938,
+          "routing": 0.003961083000000032
+        },
+        "speedup": 0.8268391276112416,
+        "efficiency": 0.8268391276112416,
+        "bottlenecks": 40,
+        "routed": 100
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.004363958999999973,
+        "phase_times": {
+          "signal": 0.00014387499999996,
+          "congestion": 0.00019441599999997505,
+          "routing": 0.004009167000000036
+        },
+        "speedup": 0.7976605646386687,
+        "efficiency": 0.3988302823193344,
+        "bottlenecks": 40,
+        "routed": 100
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.004640207999999979,
+        "phase_times": {
+          "signal": 0.00021537500000001764,
+          "congestion": 0.00028883299999998835,
+          "routing": 0.004115541999999972
+        },
+        "speedup": 0.7501728370797158,
+        "efficiency": 0.18754320926992896,
+        "bottlenecks": 40,
+        "routed": 100
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.005317541999999953,
+        "phase_times": {
+          "signal": 0.0003942500000000404,
+          "congestion": 0.00046354199999998347,
+          "routing": 0.004424874999999995
+        },
+        "speedup": 0.6546178666759961,
+        "efficiency": 0.08182723333449951,
+        "bottlenecks": 40,
+        "routed": 100
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.006554291999999962,
+        "phase_times": {
+          "signal": 0.0009638750000000029,
+          "congestion": 0.0007971669999999875,
+          "routing": 0.004744583000000024
+        },
+        "speedup": 0.5310959597161675,
+        "efficiency": 0.03319349748226047,
+        "bottlenecks": 40,
+        "routed": 100
+      }
+    ]
+  },
+  {
+    "n_intersections": 64,
+    "n_vehicles": 200,
+    "seed": 42,
+    "serial_time": 0.006937917000000016,
+    "serial_phase_times": {
+      "signal": 3.945900000001945e-05,
+      "congestion": 4.891600000000995e-05,
+      "routing": 0.006823916999999957
+    },
+    "serial_bottlenecks": 40,
+    "serial_routed": 200,
+    "parallel": [
+      {
+        "num_threads": 1,
+        "parallel_time": 0.008536624999999964,
+        "phase_times": {
+          "signal": 9.924999999999518e-05,
+          "congestion": 0.00013333299999995774,
+          "routing": 0.00828654099999998
+        },
+        "speedup": 0.8127236466402172,
+        "efficiency": 0.8127236466402172,
+        "bottlenecks": 40,
+        "routed": 200
+      },
+      {
+        "num_threads": 2,
+        "parallel_time": 0.008278708000000023,
+        "phase_times": {
+          "signal": 0.00014333299999996774,
+          "congestion": 0.00019933299999996823,
+          "routing": 0.007918208000000038
+        },
+        "speedup": 0.8380434483255111,
+        "efficiency": 0.41902172416275557,
+        "bottlenecks": 40,
+        "routed": 200
+      },
+      {
+        "num_threads": 4,
+        "parallel_time": 0.008397500000000002,
+        "phase_times": {
+          "signal": 0.00024170800000000714,
+          "congestion": 0.00027879100000000046,
+          "routing": 0.00785208300000001
+        },
+        "speedup": 0.8261883894016093,
+        "efficiency": 0.20654709735040233,
+        "bottlenecks": 40,
+        "routed": 200
+      },
+      {
+        "num_threads": 8,
+        "parallel_time": 0.009007292,
+        "phase_times": {
+          "signal": 0.00037658400000001313,
+          "congestion": 0.00046549999999995206,
+          "routing": 0.00813570800000002
+        },
+        "speedup": 0.7702555884720974,
+        "efficiency": 0.09628194855901218,
+        "bottlenecks": 40,
+        "routed": 200
+      },
+      {
+        "num_threads": 16,
+        "parallel_time": 0.010038708999999979,
+        "phase_times": {
+          "signal": 0.0007448749999999782,
+          "congestion": 0.0007851660000000038,
+          "routing": 0.008458915999999983
+        },
+        "speedup": 0.6911164573054195,
+        "efficiency": 0.04319477858158872,
+        "bottlenecks": 40,
+        "routed": 200
+      }
+    ]
+  }
+]
