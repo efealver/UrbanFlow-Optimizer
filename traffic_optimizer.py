@@ -92,11 +92,35 @@ def run_mode_all(net: TrafficNetwork, num_threads: int, verbose: bool):
     return serial_result, par_result
 
 
-def run_mode_benchmark(verbose: bool):
+def _thread_counts_up_to(max_threads: int):
+    """Use powers of two up to max_threads, including max_threads if needed."""
+    counts = []
+    t = 1
+    while t <= max_threads:
+        counts.append(t)
+        t *= 2
+    if max_threads not in counts:
+        counts.append(max_threads)
+    return counts
+
+
+def run_mode_benchmark(grid: int, vehicles: int, max_threads: int, seed: int, verbose: bool):
     print("\n[Mode: BENCHMARK]")
+    thread_counts = _thread_counts_up_to(max_threads)
+    configs = {
+        "network_sizes": [grid * grid],
+        "thread_counts": thread_counts,
+        "vehicle_counts": [vehicles],
+    }
+
+    print("  Custom benchmark configuration:")
+    print(f"  Grid      : {grid}×{grid} = {grid * grid} intersections")
+    print(f"  Vehicles  : {vehicles}")
+    print(f"  Threads   : {thread_counts}")
     print("  This may take several minutes depending on machine speed...\n")
+
     from benchmark import run_full_benchmark, print_summary_table
-    results = run_full_benchmark(verbose=verbose)
+    results = run_full_benchmark(configs=configs, seed=seed, verbose=verbose)
     print_summary_table(results)
 
     print("\n  Generating visualizations...")
@@ -169,6 +193,22 @@ def verify_correctness(serial_result: dict, par_result: dict, tolerance: float =
     if mismatched_signals:
         issues.append(f"Signal mismatch in {mismatched_signals} intersections")
 
+    s_routes = serial_result["route_stats"]
+    p_routes = par_result["route_stats"]
+    if s_routes["routed_vehicles"] != p_routes["routed_vehicles"]:
+        issues.append(
+            "Routed vehicle mismatch: "
+            f"serial={s_routes['routed_vehicles']}, "
+            f"parallel={p_routes['routed_vehicles']}"
+        )
+
+    if abs(s_routes["avg_wait"] - p_routes["avg_wait"]) > tolerance:
+        issues.append(
+            "Average wait mismatch: "
+            f"serial={s_routes['avg_wait']:.4f}, "
+            f"parallel={p_routes['avg_wait']:.4f}"
+        )
+
     if issues:
         print("\n  [Correctness] WARNINGS:")
         for issue in issues:
@@ -205,7 +245,13 @@ def main():
     print(f"  Seed     : {args.seed}")
 
     if args.mode == "benchmark":
-        run_mode_benchmark(verbose=args.verbose)
+        run_mode_benchmark(
+            grid=args.grid,
+            vehicles=args.vehicles,
+            max_threads=args.threads,
+            seed=args.seed,
+            verbose=args.verbose,
+        )
         return
 
     # Build network

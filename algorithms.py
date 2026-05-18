@@ -143,3 +143,25 @@ def compute_route(vehicle: Vehicle, network: TrafficNetwork) -> None:
     path, cost = dijkstra(network, vehicle.source, vehicle.dest)
     vehicle.route = path
     vehicle.total_wait = cost if cost != float("inf") else 0.0
+
+
+def update_route_flow(vehicle: Vehicle, network: TrafficNetwork) -> int:
+    """
+    Increment road flow along an already-computed vehicle route.
+
+    This is kept separate from Dijkstra so serial and parallel routing can first
+    compute all routes from the same congestion snapshot, then update flows.
+    """
+    updated = 0
+    route = vehicle.route
+    for i in range(len(route) - 1):
+        u, v = route[i], route[i + 1]
+        for road_id in network.adjacency.get(u, []):
+            road = network.roads[road_id]
+            if road.dest == v:
+                with road.lock:
+                    road.flow = min(road.flow + 1, road.capacity)
+                    road.congestion = road.flow / road.capacity if road.capacity > 0 else 0.0
+                updated += 1
+                break
+    return updated

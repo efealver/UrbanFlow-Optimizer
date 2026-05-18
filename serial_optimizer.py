@@ -10,7 +10,7 @@ import time
 from typing import Dict, List, Any
 
 from network import TrafficNetwork, Intersection, Road, Vehicle
-from algorithms import optimize_signal, detect_congestion, compute_route
+from algorithms import optimize_signal, detect_congestion, compute_route, update_route_flow
 
 
 def run_serial(network: TrafficNetwork, verbose: bool = False) -> Dict[str, Any]:
@@ -69,6 +69,10 @@ def run_serial(network: TrafficNetwork, verbose: bool = False) -> Dict[str, Any]
 
     for vehicle in network.vehicles:
         compute_route(vehicle, network)
+
+    for vehicle in network.vehicles:
+        if len(vehicle.route) >= 2:
+            update_route_flow(vehicle, network)
 
     phase_times["routing"] = time.perf_counter() - t0
 

@@ -36,20 +36,28 @@ def _ensure_dir():
 # 1. Speedup vs Thread Count
 # ---------------------------------------------------------------------------
 
-def plot_speedup(results: List[Dict[str, Any]], output_dir: str = SCREENSHOTS_DIR):
+def plot_speedup(
+    results: List[Dict[str, Any]],
+    output_dir: str = SCREENSHOTS_DIR,
+    vehicle_count: Optional[int] = None,
+):
     """Line plot: Speedup vs Thread Count, one line per network size."""
     _ensure_dir()
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
+    if vehicle_count is None:
+        vehicle_count = max(e["n_vehicles"] for e in results)
+    subset = [e for e in results if e["n_vehicles"] == vehicle_count]
+
     # Group results by network size
     by_size: Dict[int, Dict] = {}
-    for entry in results:
+    for entry in subset:
         n = entry["n_intersections"]
         if n not in by_size:
             by_size[n] = entry
 
-    thread_counts = sorted({p["num_threads"] for e in results for p in e["parallel"]})
+    thread_counts = sorted({p["num_threads"] for e in subset for p in e["parallel"]})
 
     for n, entry in sorted(by_size.items()):
         speedups = []
@@ -64,7 +72,11 @@ def plot_speedup(results: List[Dict[str, Any]], output_dir: str = SCREENSHOTS_DI
 
     ax.set_xlabel("Number of Threads", fontsize=12)
     ax.set_ylabel("Speedup S(T) = T_serial / T_parallel", fontsize=12)
-    ax.set_title("Speedup vs Thread Count", fontsize=14, fontweight="bold")
+    ax.set_title(
+        f"Speedup vs Thread Count ({vehicle_count} vehicles)",
+        fontsize=14,
+        fontweight="bold",
+    )
     ax.legend(loc="upper left", fontsize=9)
     ax.grid(True, alpha=0.3)
     ax.set_xticks(thread_counts)
@@ -220,19 +232,27 @@ def plot_signal_optimization(network: TrafficNetwork, output_dir: str = SCREENSH
 # 5. Efficiency vs Thread Count
 # ---------------------------------------------------------------------------
 
-def plot_efficiency(results: List[Dict[str, Any]], output_dir: str = SCREENSHOTS_DIR):
+def plot_efficiency(
+    results: List[Dict[str, Any]],
+    output_dir: str = SCREENSHOTS_DIR,
+    vehicle_count: Optional[int] = None,
+):
     """Line plot: Efficiency E(T) = S(T)/T vs Thread Count."""
     _ensure_dir()
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
+    if vehicle_count is None:
+        vehicle_count = max(e["n_vehicles"] for e in results)
+    subset = [e for e in results if e["n_vehicles"] == vehicle_count]
+
     by_size: Dict[int, Dict] = {}
-    for entry in results:
+    for entry in subset:
         n = entry["n_intersections"]
         if n not in by_size:
             by_size[n] = entry
 
-    thread_counts = sorted({p["num_threads"] for e in results for p in e["parallel"]})
+    thread_counts = sorted({p["num_threads"] for e in subset for p in e["parallel"]})
 
     for n, entry in sorted(by_size.items()):
         efficiencies = []
@@ -246,7 +266,11 @@ def plot_efficiency(results: List[Dict[str, Any]], output_dir: str = SCREENSHOTS
 
     ax.set_xlabel("Number of Threads", fontsize=12)
     ax.set_ylabel("Efficiency E(T) = S(T) / T", fontsize=12)
-    ax.set_title("Parallel Efficiency vs Thread Count", fontsize=14, fontweight="bold")
+    ax.set_title(
+        f"Parallel Efficiency vs Thread Count ({vehicle_count} vehicles)",
+        fontsize=14,
+        fontweight="bold",
+    )
     ax.legend(loc="upper right", fontsize=9)
     ax.grid(True, alpha=0.3)
     ax.set_xticks(thread_counts)

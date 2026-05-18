@@ -110,6 +110,7 @@ def run_single_benchmark(
 
 def run_full_benchmark(
     configs: Dict[str, Any] = None,
+    seed: int = RANDOM_SEED,
     verbose: bool = True,
     output_file: str = RESULTS_FILE,
 ) -> List[Dict[str, Any]]:
@@ -136,6 +137,7 @@ def run_full_benchmark(
                 n_intersections=n_int,
                 n_vehicles=n_veh,
                 thread_counts=configs["thread_counts"],
+                seed=seed,
                 verbose=verbose,
             )
             results.append(entry)

@@ -14,7 +14,7 @@ import time
 from typing import Dict, List, Any, Optional
 
 from network import TrafficNetwork, Intersection, Road, Vehicle
-from algorithms import optimize_signal, detect_congestion, compute_route
+from algorithms import optimize_signal, detect_congestion, compute_route, update_route_flow
 
 
 # ---------------------------------------------------------------------------
@@ -162,6 +162,7 @@ class RouteFlowComputer(threading.Thread):
         network: TrafficNetwork,
         global_lock: threading.Lock,
         stats_q: queue.Queue,
+        route_barrier: threading.Barrier,
         verbose: bool = False,
     ):
         super().__init__(name=f"RouteFlowComputer-{thread_id}")
@@ -170,6 +171,7 @@ class RouteFlowComputer(threading.Thread):
         self.network = network
         self.global_lock = global_lock
         self.stats_q = stats_q
+        self.route_barrier = route_barrier
         self.verbose = verbose
         self.elapsed: float = 0.0
 
@@ -178,15 +180,22 @@ class RouteFlowComputer(threading.Thread):
 
         routed = 0
         total_wait = 0.0
+        routed_vehicles: List[Vehicle] = []
 
         for vehicle in self.vehicles:
             compute_route(vehicle, self.network)
 
-            # Update road flows along the computed route (requires per-road lock)
             if len(vehicle.route) >= 2:
                 routed += 1
                 total_wait += vehicle.total_wait
-                self._update_road_flows(vehicle)
+                routed_vehicles.append(vehicle)
+
+        # Keep Dijkstra independent across vehicles: all routes use the same
+        # congestion snapshot, then flow updates are applied atomically.
+        self.route_barrier.wait()
+
+        for vehicle in routed_vehicles:
+            update_route_flow(vehicle, self.network)
 
         self.elapsed = time.perf_counter() - t0
 
@@ -298,9 +307,12 @@ def run_parallel(
 
     stats_q: queue.Queue = queue.Queue()
     veh_parts = partition(vehicles, nt_route)
+    route_barrier = threading.Barrier(nt_route)
 
     route_threads = [
-        RouteFlowComputer(i, veh_parts[i], network, global_lock, stats_q, verbose)
+        RouteFlowComputer(
+            i, veh_parts[i], network, global_lock, stats_q, route_barrier, verbose
+        )
         for i in range(nt_route)
     ]
     for t in route_threads:
